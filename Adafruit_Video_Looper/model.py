@@ -19,9 +19,9 @@ class Movie:
     def was_played(self):
         if self.repeats > 1:
             # only count up if its necessary, to prevent memory exhaustion if player runs a long time
-            self.playcount += 1
+            self.playcount = 0
         else:
-            self.playcount = 1
+            self.playcount = 0
 
     def clear_playcount(self):
         self.playcount = 0
