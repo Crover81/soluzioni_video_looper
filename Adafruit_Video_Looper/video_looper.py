@@ -480,7 +480,7 @@ class VideoLooper:
 
     def signal_quit(self, signal, frame):
         """Shut down the program, meant to by called by signal handler."""
-        self._print("received signal to quit")
+        self._print("Ricevuto segnale di uscita")
         self.quit()
 
 # Main entry point.
