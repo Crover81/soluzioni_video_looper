@@ -282,7 +282,7 @@ class VideoLooper:
             return
         # Draw message with number of movies loaded and animate countdown.
         # First render text that doesn't change and get static dimensions.
-        label1 = self._render_text(message + ' Starting playback in:')
+        label1 = self._render_text(message + ' Avvio della riproduzione in:')
         l1w, l1h = label1.get_size()
         sw, sh = self._screen.get_size()
         for i in range(self._countdown_time, 0, -1):
@@ -325,7 +325,7 @@ class VideoLooper:
         self._screen.blit(label, (sw/2-lw/2, sh/2-lh/2))
         # If keyboard control is enabled, display message about it
         if self._keyboard_control:
-            label2 = self._render_text('press ESC to quit')
+            label2 = self._render_text('premi ESC per uscire')
             l2w, l2h = label2.get_size()
             self._screen.blit(label2, (sw/2-l2w/2, sh/2-l2h/2+lh))
         pygame.display.update()
@@ -439,7 +439,7 @@ class VideoLooper:
                         infotext = '(endless loop)'
 
                     # Start playing the first available movie.
-                    self._print('Playing movie: {0} {1}'.format(movie, infotext))
+                    self._print('Riproduzione video: {0} {1}'.format(movie, infotext))
                     # todo: maybe clear screen to black so that background (image/color) is not visible for videos with a resolution that is < screen resolution
                     self._player.play(movie, loop=-1 if self._playlist.length()==1 else None, vol = self._sound_vol)
 
