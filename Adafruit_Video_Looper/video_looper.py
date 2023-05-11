@@ -379,7 +379,7 @@ class VideoLooper:
                     self.quit()
                 if event.key == pygame.K_k:
                     self._print("k was pressed. skipping...")
-                    self._playlist.seek(99999)
+                    self._playlist.seek(100000)
                     self._player.stop(3)
                     self.playcount = 0
                 if event.key == pygame.K_s:
@@ -395,7 +395,7 @@ class VideoLooper:
                     self.quit(True)
                 if event.key == pygame.K_b:
                     self._print("b was pressed. jumping back...")
-                    self._playlist.seek(-99999)
+                    self._playlist.seek(-100000)
                     self._player.stop(3)
                     self.playcount = 0
                     
